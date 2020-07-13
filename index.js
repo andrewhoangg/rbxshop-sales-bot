@@ -37,6 +37,8 @@ client.on('ready', async message => {
     rbxlogin();
     client.user.setActivity('!stock for stock info');
     //channelUpdateStock();
+
+    // test
 });
 
 client.on('message', message => {

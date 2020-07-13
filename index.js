@@ -106,7 +106,7 @@ client.on('message', message => {
                         embed.setColor('#f54242')
                         embed.setTitle("Error: Invalid argument")
                         embed.setAuthor('RBXShop Sales', 'https://cdn.discordapp.com/attachments/571908659043631104/732149000412594237/instock.png')
-                        embed.setDescription('Numbers must be greater than 0 and be a number!')
+                        embed.setDescription('Numbers must be a number and greater than 0!')
                         embed.setTimestamp()
                         embed.setFooter('RBXShop - Founded by andreww & Reversed');
                         message.channel.send(embed);
@@ -130,7 +130,7 @@ client.on('message', message => {
                         embed.setColor('#f54242')
                         embed.setTitle("Error: Invalid argument")
                         embed.setAuthor('RBXShop Sales', 'https://cdn.discordapp.com/attachments/571908659043631104/732149000412594237/instock.png')
-                        embed.setDescription('Numbers must be greater than 0 and be a number!')
+                        embed.setDescription('Numbers must be a number and greater than 0!')
                         embed.setTimestamp()
                         embed.setFooter('RBXShop - Founded by andreww & Reversed');
                         message.channel.send(embed);

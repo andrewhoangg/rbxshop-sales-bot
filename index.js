@@ -101,7 +101,16 @@ client.on('message', message => {
 
                 if (input_type === "robux") // R$ -> USD
                 {
-                    if (isNaN(input_val) || input_val < 0){ message.reply("Invalid argument, must be a number and greater than 0!")}
+                    if (isNaN(input_val) || input_val < 0)
+                    { 
+                        embed.setColor('#f54242')
+                        embed.setTitle("Error: Invalid argument")
+                        embed.setAuthor('RBXShop Sales', 'https://cdn.discordapp.com/attachments/571908659043631104/732149000412594237/instock.png')
+                        embed.setDescription('Numbers must be greater than 0 and be a number!')
+                        embed.setTimestamp()
+                        embed.setFooter('RBXShop - Founded by andreww & Reversed');
+                        message.channel.send(embed);
+                    }
                     else 
                     {
                         embed.setColor('#00ff1a')
@@ -116,7 +125,16 @@ client.on('message', message => {
                 }
                 else if (input_type === "USD" || input_type === "usd") // USD -> R$
                 {
-                    if (isNaN(input_val) || input_val < 0){ message.reply("Invalid argument, must be a number and greater than 0!") }
+                    if (isNaN(input_val) || input_val < 0)
+                    {
+                        embed.setColor('#f54242')
+                        embed.setTitle("Error: Invalid argument")
+                        embed.setAuthor('RBXShop Sales', 'https://cdn.discordapp.com/attachments/571908659043631104/732149000412594237/instock.png')
+                        embed.setDescription('Numbers must be greater than 0 and be a number!')
+                        embed.setTimestamp()
+                        embed.setFooter('RBXShop - Founded by andreww & Reversed');
+                        message.channel.send(embed);
+                    }
                     else
                     {
                         embed.setColor('#00ff1a')

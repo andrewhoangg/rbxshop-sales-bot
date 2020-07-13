@@ -92,7 +92,7 @@ client.on('message', message => {
                     else 
                     {
                         embed.setColor('#00ff1a')
-                        embed.setTitle(input_val + " Robux at a rate of 0.0055/1 is $" + (input_val * rate).toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",") + " USD!")
+                        embed.setTitle(input_val + " Robux at a rate of 0.0055/1 is $" + Math.round(input_val * rate).toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",") + " USD!")
                         embed.setAuthor('RBXShop Sales', 'https://cdn.discordapp.com/attachments/571908659043631104/732149000412594237/instock.png')
                         embed.setDescription('#purchase-robux | Accepted Payment Methods: PayPal, Zelle, CashApp, Venmo, Credit/Debit, Bitcoin, Amazon')
                         embed.setThumbnail('https://i.pinimg.com/originals/4d/06/56/4d0656e77aecce07e126af81be09dd39.png')

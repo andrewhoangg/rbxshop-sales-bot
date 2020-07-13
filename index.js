@@ -101,7 +101,7 @@ client.on('message', message => {
 
                 if (input_type === "robux") // R$ -> USD
                 {
-                    if (isNaN(input_val)){ message.reply("Arguments must be a number!")}
+                    if (isNaN(input_val) || input_val < 0){ message.reply("Invalid argument, must be a number and greater than 0!")}
                     else 
                     {
                         embed.setColor('#00ff1a')
@@ -116,7 +116,7 @@ client.on('message', message => {
                 }
                 else if (input_type === "USD" || input_type === "usd") // USD -> R$
                 {
-                    if (isNaN(input_val)){ message.reply("Arguments must be a number!") }
+                    if (isNaN(input_val) || input_val < 0){ message.reply("Invalid argument, must be a number and greater than 0!") }
                     else
                     {
                         embed.setColor('#00ff1a')

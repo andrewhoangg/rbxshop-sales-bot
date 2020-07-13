@@ -126,7 +126,9 @@ client.on('message', message => {
                 message.guild.channels.cache.get("732016195112403116").setName("✅ SALES: ONLINE ✅");
             }
             else { return }
-            message.delete();
+            setTimeout(function(){
+                message.delete();
+            }, 500);
         break;
 
         case 'close':
@@ -135,7 +137,9 @@ client.on('message', message => {
                 message.guild.channels.cache.get("732016195112403116").setName("❌ SALES: OFFLINE ❌");
             }
             else { return }
-            message.delete();
+            setTimeout(function(){
+                message.delete();
+            }, 500);
         break;
 
         case 'stock':
@@ -163,7 +167,9 @@ client.on('message', message => {
                         embed.setFooter('RBXShop - Founded by andreww & Reversed');   
                     }
                 message.channel.send(embed);
-                message.delete();
+                setTimeout(function(){
+                    message.delete();
+                }, 500);
             });
           });
         break;

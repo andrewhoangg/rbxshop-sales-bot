@@ -3,6 +3,8 @@ const fetch = require("node-fetch");
 const client = new Discord.Client();
 const prefix = '!';
 
+var numeral = require('numeral');
+
 let groupId = 4050917;
 
 
@@ -20,16 +22,14 @@ function channelUpdateStock()
             if (stock === "RESTOCKING!")
             {
                 client.channels.cache.get("728507809963966465").setName("❗ RESTOCKING! ❗");
-                console.log('out of stock');
             }
             else
             {
-                client.channels.cache.get("728507809963966465").setName("💰 STOCK: " + stock + " 💰");
-                console.log('in stock');
+                client.channels.cache.get("728507809963966465").setName("💰 STOCK: " + numeral(stock).format('0.0a') + "+ 💰");
             }
         });
       });
-    }, 1000);
+    }, 120000);
 }
 
 client.on('ready', async message => {

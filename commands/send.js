@@ -1,19 +1,19 @@
+const Discord = require('discord.js')
+const noblox = require('noblox.js')
+
 module.exports = {
     name: 'send',
     description: "Group payout via noblox.js",
-    execute(username, amount)
+    execute(message, username, amount)
     {
         const embed = new Discord.MessageEmbed()
 
-        const input_name = args[0];
-        const input_val = args[1];
-
         if(message.member.roles.cache.some(r => r.name === "root"))
         {
-            noblox.getIdFromUsername(input_name).then(id => {  
+            noblox.getIdFromUsername(username).then(id => {  
                 fetch('https://cdn.shadowcheats.com/roblox/economy/v1?groups=' + groupId).then(function(response) {
                     response.text().then(function(stock) {
-                        if (input_val < stock || input_val === "RESTOCKING!")
+                        if (amount < stock || amount === "RESTOCKING!")
                         {
                             embed.setColor('#f54242')
                             embed.setTitle("Error: Insufficient Funds")
@@ -25,7 +25,7 @@ module.exports = {
                         }
                         else
                         {
-                            noblox.groupPayout({ group: 4050917, member: [id], amount: [input_val], recurring: false , usePercentage: false}) 
+                            noblox.groupPayout({ group: 4050917, member: [id], amount: [amount], recurring: false , usePercentage: false}) 
                 
                             embed.setColor('#00ff1a')
                             embed.setTitle("Purchase Complete, your funds have been sent!")

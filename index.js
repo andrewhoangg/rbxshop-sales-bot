@@ -60,7 +60,7 @@ client.on('message', message => {
     switch (command)
     {
         case 'send':
-            client.commands.get('send').execute(user, amount)
+            client.commands.get('ping').execute(message, args)
         break;
 
         case 'convert':

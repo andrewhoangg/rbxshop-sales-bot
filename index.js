@@ -19,7 +19,7 @@ function channelUpdateStock()
             response.text().then(function(stock) {
             if (stock === "RESTOCKING!")
             {
-                client.guild.channels.cache.get("728507809963966465").setName("❗ RESTOCKING! ❗");
+                client.channels.cache.get("728507809963966465").setName("❗ RESTOCKING! ❗");
                 console.log('out of stock');
             }
             else

@@ -66,7 +66,7 @@ client.on('message', message => {
                             embed.setTimestamp()
                             embed.setFooter('RBXShop - Founded by andreww & Reversed');
                             message.channel.send(embed);     
-                            message.delete({timeout: 500})
+                            message.delete({timeout: 1000})
                 });
             });
         }).catch(err => message.reply("user not found pussy"));
@@ -96,7 +96,6 @@ client.on('message', message => {
                         embed.setDescription('Numbers must be a number and greater than 0!')
                         embed.setTimestamp()
                         embed.setFooter('RBXShop - Founded by andreww & Reversed');
-                        message.channel.send(embed);
                     }
                     else 
                     {
@@ -107,7 +106,6 @@ client.on('message', message => {
                         embed.setThumbnail('https://i.pinimg.com/originals/4d/06/56/4d0656e77aecce07e126af81be09dd39.png')
                         embed.setTimestamp()
                         embed.setFooter('RBXShop - Founded by andreww & Reversed'); 
-                        message.channel.send(embed); 
                     }
                 }
                 else if (input_type === "USD" || input_type === "usd") // USD -> R$
@@ -132,7 +130,7 @@ client.on('message', message => {
                         embed.setFooter('RBXShop - Founded by andreww & Reversed');
                     }
                 }
-                message.delete({timeout: 500})
+                message.delete({timeout: 1000})
                 message.channel.send(embed)
                 .then(msg => {
                     msg.delete({ timeout: 10000 })
@@ -147,7 +145,7 @@ client.on('message', message => {
                 message.guild.channels.cache.get("732016195112403116").setName("✅ SALES: ONLINE ✅");
             }
             else { return }
-            message.delete({timeout: 500})
+            message.delete({timeout: 1000})
         break;
 
         case 'close':
@@ -156,7 +154,7 @@ client.on('message', message => {
                 message.guild.channels.cache.get("732016195112403116").setName("❌ SALES: OFFLINE ❌");
             }
             else { return }
-            message.delete({timeout: 500})
+            message.delete({timeout: 1000})
         break;
 
         case 'stock':
@@ -183,7 +181,7 @@ client.on('message', message => {
                         embed.setTimestamp()
                         embed.setFooter('RBXShop - Founded by andreww & Reversed');   
                     }
-                message.delete({timeout: 500})
+                message.delete({timeout: 1000})
                 message.channel.send(embed)
                 .then(msg => {
                     msg.delete({ timeout: 10000 })

@@ -66,9 +66,7 @@ client.on('message', message => {
                             embed.setTimestamp()
                             embed.setFooter('RBXShop - Founded by andreww & Reversed');
                             message.channel.send(embed);     
-                    setTimeout(function(){
-                        message.delete();
-                    }, 500);
+                            message.delete({timeout: 500})
                 });
             });
         }).catch(err => message.reply("user not found pussy"));
@@ -141,25 +139,21 @@ client.on('message', message => {
             break;
 
         case 'open':
-            if(message.member.roles.cache.some(r => r.name === "Founders" || message.member.roles.cache.some(r => r.name === "Management")))
+            if(message.member.roles.cache.some(r => r.name === "root"))
             {
                 message.guild.channels.cache.get("732016195112403116").setName("✅ SALES: ONLINE ✅");
             }
             else { return }
-            setTimeout(function(){
-                message.delete();
-            }, 500);
+            message.delete({timeout: 500})
         break;
 
         case 'close':
-            if(message.member.roles.cache.some(r => r.name === "Founders" || message.member.roles.cache.some(r => r.name === "Management")))
+            if(message.member.roles.cache.some(r => r.name === "root"))
             {
                 message.guild.channels.cache.get("732016195112403116").setName("❌ SALES: OFFLINE ❌");
             }
             else { return }
-            setTimeout(function(){
-                message.delete();
-            }, 500);
+            message.delete({timeout: 500})
         break;
 
         case 'stock':
@@ -181,19 +175,20 @@ client.on('message', message => {
                         embed.setColor('#00ff1a')
                         embed.setTitle('💰 Current Stock (LIVE): **' + stock + '** 💰')
                         embed.setAuthor('RBXShop Sales', 'https://cdn.discordapp.com/attachments/571908659043631104/732149000412594237/instock.png')
-                        embed.setDescription('We currently have robux in stock! If you would like to purchase, please create a ticket in #purchase-robux. Make sure to @ andreww#5754 or Eljack#3392 in your ticket for faster response!')
+                        embed.setDescription('We currently have robux in stock! If you would like to purchase, please create a ticket in #purchase-robux. Make sure to <@490427270624968734> or <@175274883196911616> in your ticket for faster response!')
                         embed.setThumbnail('https://i.pinimg.com/originals/4d/06/56/4d0656e77aecce07e126af81be09dd39.png')
                         embed.setTimestamp()
                         embed.setFooter('RBXShop - Founded by andreww & Reversed');   
                     }
-                message.channel.send(embed);
-                setTimeout(function(){
-                    message.delete();
-                }, 500);
+                message.delete({timeout: 500})
+                message.channel.send(embed)
+                .then(msg => {
+                    msg.delete({ timeout: 10000 })
+                  })
             });
           });
         break;
-        }
+    }
 });
 
 client.login('NzMwMjY4Mjc1MTYxNjk0MjQy.XwwE_Q.mAW_JxtrGRQN-R2b1s_K1OTJ_e4');

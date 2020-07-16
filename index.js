@@ -67,6 +67,10 @@ client.on('message', message => {
                 {
                     message.channel.send("https://cdn.discordapp.com/attachments/571908659043631104/728510581862170664/Screenshot_20200703-002051.png");
                 }
+                else
+                {
+                    message.reply("Invalid argument! Usage: ```!link [group/paypalqr/venmoqr/cashappqr]```")
+                }
                 message.delete({timeout: 500})
             }
         break;

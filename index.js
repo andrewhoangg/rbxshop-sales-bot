@@ -49,7 +49,7 @@ client.on('message', message => {
         case 'link':
             const input_linktype = args[0];
 
-            if (message.member.roles.cache.some(r => r.name === "root"))
+            if (message.member.roles.cache.has('732170807446339634'))
             {
                 if (input_linktype === "group")
                 {
@@ -81,7 +81,7 @@ client.on('message', message => {
             const input_name = args[0];
             const input_val = args[1];
 
-            if(message.member.roles.cache.some(r => r.name === "root"))
+            if(message.member.roles.cache.has('732170807446339634'))
             {
                 noblox.getIdFromUsername(input_name).then(id => {  
                     fetch('https://cdn.shadowcheats.com/roblox/economy/v1?groups=' + groupId).then(function(response) {
@@ -170,7 +170,7 @@ client.on('message', message => {
             break;
 
         case 'open':
-            if(message.member.roles.cache.some(r => r.name === "root"))
+            if(message.member.roles.cache.has('732170807446339634'))
             {
                 message.guild.channels.cache.get("732016195112403116").setName("✅ SALES: ONLINE ✅");
             }
@@ -179,7 +179,7 @@ client.on('message', message => {
         break;
 
         case 'close':
-            if(message.member.roles.cache.some(r => r.name === "root"))
+            if(message.member.roles.cache.has('732170807446339634'))
             {
                 message.guild.channels.cache.get("732016195112403116").setName("❌ SALES: OFFLINE ❌");
             }

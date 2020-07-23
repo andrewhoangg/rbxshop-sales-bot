@@ -41,7 +41,7 @@ function channelUpdateStock()
     }, 120000); // updates every 2 minutes
 
     setInterval(() => {
-        fetch('https://cdn.shadowcheats.com/roblox/economy/v1?groups=5223832' + groupId).then(function(response) {
+        fetch('https://cdn.shadowcheats.com/roblox/economy/v1?groups=5223832').then(function(response) {
             response.text().then(function(stock) {
             if (stock === "RESTOCKING!")
             {

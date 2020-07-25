@@ -38,7 +38,6 @@ module.exports = {
                             embed.setTimestamp()
                             embed.setFooter('RBXShop - Founded by andreww & Reversed');
                             message.channel.send(embed);
-                            message.channels.get('735575082146988072').send(input_val + "was paid out to: " + input_name);     
                             message.delete({timeout: 1000})
                         }
 

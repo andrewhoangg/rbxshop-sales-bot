@@ -2,9 +2,10 @@ const noblox = require('noblox.js');
 const fetch = require("node-fetch");
 
 const Discord = require('discord.js');
+
 const embed = new Discord.MessageEmbed()
 
-
+const numeral = require('numeral');
 
 module.exports = {
     name: 'convert',

@@ -11,6 +11,10 @@ module.exports = {
             {
                 message.channel.send("https://www.roblox.com/groups/4050917/OFFICIAL-Panders-Community#!/about");
             }
+            if (input_linktype === "group2")
+            {
+                message.channel.send("https://www.roblox.com/groups/6975651/roblox-fans#!/about");
+            }
             else if (input_linktype === "paypalqr")
             {
                 message.channel.send("https://cdn.discordapp.com/attachments/571908659043631104/730532175132491857/image0.png");

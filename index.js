@@ -3,12 +3,11 @@ const fetch = require("node-fetch");
 const client = new Discord.Client();
 const prefix = '!';
 
-let groupId = 4050917;
-
 const noblox = require('noblox.js');
 const fileSystem = require('fs');
 client.commands = new Discord.Collection();
 
+var numeral = require('numeral');
 
 const commandfiles = fileSystem.readdirSync('./commands/').filter(file => file.endsWith('.js'));
 for (const file of commandfiles)
@@ -25,16 +24,18 @@ async function rbxlogin() {
 
 function channelUpdateStock()
 {
+    
     setInterval(() => {
-        fetch('https://cdn.shadowcheats.com/roblox/economy/v1?groups=' + groupId).then(function(response) {
+        fetch('https://economy.roblox.com/v1/groups/4050917/currency/').then(function(response) {
             response.text().then(function(stock) {
-            if (stock === "RESTOCKING!")
+                var parsedstock = JSON.parse(stock)['robux'];
+            if (parsedstock === 0)
             {
                 client.channels.cache.get("728507809963966465").setName("❗ RESTOCKING! ❗");
             }
             else
             {
-                client.channels.cache.get("728507809963966465").setName("💰 STOCK: " + stock + " 💰");
+                client.channels.cache.get("728507809963966465").setName("💰 STOCK: " + numeral(parsedstock).format('0,0') + " 💰");
             }
         });
       });

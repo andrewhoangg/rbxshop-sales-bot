@@ -4,7 +4,7 @@ const fetch = require("node-fetch");
 const Discord = require('discord.js');
 const embed = new Discord.MessageEmbed()
 
-var numeral = require('numeral');
+
 
 module.exports = {
     name: 'convert',

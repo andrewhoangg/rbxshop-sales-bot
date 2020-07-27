@@ -3,18 +3,19 @@ const fetch = require("node-fetch");
 
 const Discord = require('discord.js');
 const embed = new Discord.MessageEmbed()
-
-let groupId = 4050917;
+var numeral = require('numeral');
 
 module.exports = {
     name: 'stock',
     description: 'grabs stock from group funds',
     execute (message, args)
     {
-        fetch('https://cdn.shadowcheats.com/roblox/economy/v1?groups=' + groupId).then(function(response) {
+        fetch('https://economy.roblox.com/v1/groups/4050917/currency/').then(function(response) {
             response.text().then(function(stock) {
                 const embed = new Discord.MessageEmbed()
-                if (stock === 'RESTOCKING!')
+                var parsedstock = JSON.parse(stock)['robux'];
+
+                if (parsedstock === 0)
                 {
                     embed.setColor('#ff7f00')
                     embed.setTitle('💰 Current Stock (LIVE): **RESTOCKING!**')
@@ -27,7 +28,7 @@ module.exports = {
                 else
                 {
                     embed.setColor('#00ff1a')
-                    embed.setTitle('💰 Current Stock (LIVE): **' + stock + '** 💰')
+                    embed.setTitle('💰 Current Stock (LIVE): **' + numeral(parsedstock).format('0,0') + '** 💰')
                     embed.setAuthor('RBXShop Sales', 'https://cdn.discordapp.com/attachments/571908659043631104/732149000412594237/instock.png')
                     embed.setDescription('We currently have robux in stock! If you would like to purchase, please create a ticket in #purchase-robux. Make sure to <@490427270624968734> or <@175274883196911616> in your ticket for faster response!')
                     embed.setThumbnail('https://i.pinimg.com/originals/4d/06/56/4d0656e77aecce07e126af81be09dd39.png')

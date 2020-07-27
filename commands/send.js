@@ -4,8 +4,6 @@ const fetch = require("node-fetch");
 const Discord = require('discord.js');
 const embed = new Discord.MessageEmbed()
 
-let groupId = 4050917;
-
 module.exports = {
     name: 'send',
     description: 'sends group funds',
@@ -20,10 +18,11 @@ module.exports = {
         if(message.member.roles.cache.has('732170807446339634'))
         {
             noblox.getIdFromUsername(input_name).then(id => {  
-                fetch('https://cdn.shadowcheats.com/roblox/economy/v1?groups=' + groupId).then(function(response) {
+                fetch('https://economy.roblox.com/v1/groups/4050917/currency/').then(function(response) {
                     response.text().then(function(stock) {
+                        var parsedstock = JSON.parse(stock)['robux'];
 
-                        if (input_val > stock)
+                        if (input_val > parsedstock)
                         {
                             message.reply("You can't send more than what's in stock!")
                         }

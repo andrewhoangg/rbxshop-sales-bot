@@ -11,7 +11,7 @@ module.exports = {
             {
                 message.channel.send("https://www.roblox.com/groups/4050917/OFFICIAL-Panders-Community#!/about");
             }
-            if (input_linktype === "group2")
+            else if (input_linktype === "group2")
             {
                 message.channel.send("https://www.roblox.com/groups/6975651/roblox-fans#!/about");
             }

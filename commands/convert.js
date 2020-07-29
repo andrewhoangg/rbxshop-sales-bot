@@ -31,7 +31,7 @@ module.exports = {
                 embed.setAuthor('RBXShop Sales', 'https://cdn.discordapp.com/attachments/571908659043631104/732149000412594237/instock.png')
                 embed.setDescription('Numbers must be a number and greater than 0!')
                 embed.setTimestamp()
-                embed.setFooter('RBXShop - Founded by andreww & Reversed');
+                embed.setFooter('RBXShop Sales');
             }
             else 
             {
@@ -41,7 +41,7 @@ module.exports = {
                 embed.setDescription('#purchase-robux | Accepted Payment Methods: PayPal, Zelle, CashApp, Venmo, Credit/Debit, Bitcoin, Amazon')
                 embed.setThumbnail('https://i.pinimg.com/originals/4d/06/56/4d0656e77aecce07e126af81be09dd39.png')
                 embed.setTimestamp()
-                embed.setFooter('RBXShop - Founded by andreww & Reversed'); 
+                embed.setFooter('RBXShop Sales'); 
             }
         }
         else if (input_type === "USD" || input_type === "usd") // USD -> R$
@@ -53,7 +53,7 @@ module.exports = {
                 embed.setAuthor('RBXShop Sales', 'https://cdn.discordapp.com/attachments/571908659043631104/732149000412594237/instock.png')
                 embed.setDescription('Numbers must be a number and greater than 0!')
                 embed.setTimestamp()
-                embed.setFooter('RBXShop - Founded by andreww & Reversed');
+                embed.setFooter('RBXShop Sales');
             }
             else
             {
@@ -63,7 +63,7 @@ module.exports = {
                 embed.setDescription('#purchase-robux | Accepted Payment Methods: PayPal, Zelle, CashApp, Venmo, Credit/Debit, Bitcoin, Amazon')
                 embed.setThumbnail('https://i.pinimg.com/originals/4d/06/56/4d0656e77aecce07e126af81be09dd39.png')
                 embed.setTimestamp()
-                embed.setFooter('RBXShop - Founded by andreww & Reversed');
+                embed.setFooter('RBXShop Sales');
             }
         }
         message.delete({timeout: 1000})

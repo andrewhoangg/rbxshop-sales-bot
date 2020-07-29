@@ -81,6 +81,9 @@ client.on('message', message => {
         case 'stock':
             client.commands.get('stock').execute(message,args);
         break;
+        case 'form':
+            client.commands.get('form').execute(message, args);
+        break;
     }
 });
 

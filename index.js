@@ -58,7 +58,7 @@ client.on('ready', async message => {
     console.log(`Logged in as ${client.user.tag}!`);
     rbxlogin();
     client.user.setActivity('!stock for stock info');
-    //channelUpdateStock();
+    channelUpdateStock();
 });
 
 client.on('message', message => {

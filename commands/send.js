@@ -21,13 +21,6 @@ module.exports = {
                 fetch('https://economy.roblox.com/v1/groups/4050917/currency/').then(function(response) {
                     response.text().then(function(stock) {
                         var parsedstock = JSON.parse(stock)['robux'];
-
-                        if (input_val > parsedstock)
-                        {
-                            message.reply("You can't send more than what's in stock!")
-                        }
-                        else
-                        {
                             noblox.groupPayout({ group: 6975651, member: [id], amount: [input_val], recurring: false , usePercentage: false}) 
                             embed.setColor('#00ff1a')
                             embed.setTitle("Purchase Complete, your funds have been sent!")
@@ -38,7 +31,7 @@ module.exports = {
                             embed.setFooter('RBXShop Sales');
                             message.channel.send(embed);
                             message.delete({timeout: 1000})
-                        }
+                        
 
             });
         });

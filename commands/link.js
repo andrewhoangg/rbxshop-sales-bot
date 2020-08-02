@@ -29,7 +29,7 @@ module.exports = {
             }
             else
             {
-                message.reply("Invalid argument! Usage: ```!link [group/paypalqr/venmoqr/cashappqr]```")
+                message.reply("Invalid argument! Usage: ```!link [group/group2/paypalqr/venmoqr/cashappqr]```")
             }
             message.delete({timeout: 500})
         }

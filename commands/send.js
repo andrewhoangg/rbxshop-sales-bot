@@ -25,7 +25,7 @@ module.exports = {
                             embed.setColor('#00ff1a')
                             embed.setTitle("Purchase Complete, your funds have been sent!")
                             embed.setAuthor('RBXShop Sales', 'https://cdn.discordapp.com/attachments/571908659043631104/732149000412594237/instock.png')
-                            embed.setDescription('Thank you for purchasing from RBXShop, you should have received the "Verified Buyers" role. Please leave a vouch in #vouches!')
+                            embed.setDescription('Thank you for purchasing from RBXShop, you should have received the "Verified Buyers" role. Please leave a vouch in <#724694258128257187>')
                             embed.setThumbnail('https://image.spreadshirtmedia.net/image-server/v1/compositions/T812A1PA3811PT17X49Y47D167531197FS2951/views/1,width=650,height=650,appearanceId=1/haha-yes-order-executed.jpg')
                             embed.setTimestamp()
                             embed.setFooter('RBXShop Sales');

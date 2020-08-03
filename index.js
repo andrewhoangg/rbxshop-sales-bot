@@ -24,8 +24,8 @@ async function rbxlogin() {
 
 function channelUpdateStock()
 {
-    
-    setInterval(() => {
+    setInterval(() => 
+    {
         fetch('https://economy.roblox.com/v1/groups/4050917/currency/').then(function(response) {
             response.text().then(function(stock) {
                 var parsedstock = JSON.parse(stock)['robux'];
@@ -41,7 +41,7 @@ function channelUpdateStock()
             });
          }, 120000); // updates every 2 minutes
     }
-
+    
 client.on('ready', async message => {
     console.log(`Logged in as ${client.user.tag}!`);
     rbxlogin();

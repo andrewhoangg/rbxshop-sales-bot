@@ -29,30 +29,18 @@ function channelUpdateStock()
         fetch('https://economy.roblox.com/v1/groups/4050917/currency/').then(function(response) {
             response.text().then(function(stock) {
                 var parsedstock = JSON.parse(stock)['robux'];
-            if (parsedstock === 0)
-            {
-                client.channels.cache.get("728507809963966465").setName("❗ RESTOCKING! ❗");
-            }
-            else
-            {
-                client.channels.cache.get("728507809963966465").setName("💰 STOCK: " + numeral(parsedstock).format('0,0') + " 💰");
-            }
-        });
-      });
-    }, 120000); // updates every 2 minutes
-
-/*
-    setInterval(() => {
-        fetch('https://economy.roblox.com/v1/groups/4050917/revenue/summary/Day').then(function(response) { // updates pending robux
-        response.text().then(function(stock2) {
-            var parsedpending = JSON.parse(stock2)['pendingRobux'];
-           //client.channels.cache.get("728507913248964638").setName("⌛ PENDING: " + numeral(parsedpending).format('0.0a') + "  ⌛");
-
-           console.log(stock2);
-        });
-      });
-    }, 1000); */
-}
+                    if (parsedstock === 0)
+                    {
+                        client.channels.cache.get("728507809963966465").setName("❗ RESTOCKING! ❗");
+                    }
+                    else
+                    {
+                        client.channels.cache.get("728507809963966465").setName("💰 STOCK: " + numeral(parsedstock).format('0,0') + " 💰");
+                    }
+                });
+            });
+         }, 120000); // updates every 2 minutes
+    }
 
 client.on('ready', async message => {
     console.log(`Logged in as ${client.user.tag}!`);

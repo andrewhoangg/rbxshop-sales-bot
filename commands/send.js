@@ -7,15 +7,12 @@ const embed = new Discord.MessageEmbed()
 module.exports = {
     name: 'send',
     description: 'sends group funds',
-    execute(message, args) {
-        
+    execute(message, args) {        
 
         const input_name = args[0];
         const input_val = args[1];
 
-        // !send metaconcat 1
-
-        if(message.member.roles.cache.has('732170807446339634'))
+        if (message.author.id != '490427270624968734') return message.reply('Unauthorized, please contact <@490427270624968734> to send from Stock 1')
         {
             noblox.getIdFromUsername(input_name).then(id => {  
                 fetch('https://economy.roblox.com/v1/groups/4050917/currency/').then(function(response) {
@@ -23,20 +20,26 @@ module.exports = {
                         var parsedstock = JSON.parse(stock)['robux'];
                             noblox.groupPayout({ group: 4050917, member: [id], amount: [input_val], recurring: false , usePercentage: false}) 
                             embed.setColor('#00ff1a')
-                            embed.setTitle("Purchase Complete, your funds have been sent!")
+                            embed.setTitle("Purchase complete, your funds have been sent!")
                             embed.setAuthor('RBXShop Sales', 'https://cdn.discordapp.com/attachments/571908659043631104/732149000412594237/instock.png')
-                            embed.setDescription('Thank you for purchasing from RBXShop, you should have received the "Verified Buyers" role. Please leave a vouch in <#724694258128257187>')
-                            embed.setThumbnail('https://image.spreadshirtmedia.net/image-server/v1/compositions/T812A1PA3811PT17X49Y47D167531197FS2951/views/1,width=650,height=650,appearanceId=1/haha-yes-order-executed.jpg')
+                            embed.setDescription(`**${input_val}** :robux: has been sent to **${input_name}**. Please leave a vouch in <#724694258128257187>! \n **Remaining Stock: ${parsedstock}**`)
+                            embed.setThumbnail('https://cdn.discordapp.com/attachments/571908659043631104/740045820430385202/kindpng_4312134.png')
                             embed.setTimestamp()
                             embed.setFooter('RBXShop Sales');
                             message.channel.send(embed);
                             message.delete({timeout: 1000})
-                        
-
+                    });
+                });
+            }).catch(err => {
+                embed.setColor('#f54242')
+                embed.setTitle("Error Caught")
+                embed.setAuthor('RBXShop Sales', 'https://cdn.discordapp.com/attachments/571908659043631104/732149000412594237/instock.png')
+                embed.setDescription('Failed to send funds, cookie is either invalid or user not found.')
+                embed.setThumbnail('https://cdn.discordapp.com/attachments/571908659043631104/740041143143628850/error-48242.png')
+                embed.setTimestamp()
+                embed.setFooter('RBXShop Sales');
+                message.channel.send(embed);
             });
-        });
-    }).catch(err => message.reply("user not found pussy"));
-}
-        else { return }
+        }
     }
 }

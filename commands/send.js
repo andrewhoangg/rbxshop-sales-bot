@@ -18,7 +18,7 @@ module.exports = {
                 fetch('https://economy.roblox.com/v1/groups/4050917/currency/').then(function(response) {
                     response.text().then(function(stock) {
                         var parsedstock = JSON.parse(stock)['robux'];
-                            noblox.groupPayout({ group: 4050917, member: [id], amount: [input_val], recurring: false , usePercentage: false}) 
+                            noblox.groupPayout({ group: 7082916, member: [id], amount: [input_val], recurring: false , usePercentage: false}) 
                             embed.setColor('#00ff1a')
                             embed.setTitle("Purchase complete, your funds have been sent!")
                             embed.setAuthor('RBXShop Sales', 'https://cdn.discordapp.com/attachments/571908659043631104/732149000412594237/instock.png')

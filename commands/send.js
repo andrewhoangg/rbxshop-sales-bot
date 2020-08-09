@@ -17,17 +17,16 @@ module.exports = {
             noblox.getIdFromUsername(input_name).then(id => {  
                 fetch('https://economy.roblox.com/v1/groups/4050917/currency/').then(function(response) {
                     response.text().then(function(stock) {
-                        var parsedstock = JSON.parse(stock)['robux'];
-                            noblox.groupPayout({ group: 7082916, member: [id], amount: [input_val], recurring: false , usePercentage: false}) 
-                            embed.setColor('#00ff1a')
-                            embed.setTitle("Purchase complete, your funds have been sent!")
-                            embed.setAuthor('RBXShop Sales', 'https://cdn.discordapp.com/attachments/571908659043631104/732149000412594237/instock.png')
-                            embed.setDescription(`**${input_val} Robux** has been sent to **${input_name}**. Please leave a vouch in <#724694258128257187>!`)
-                            embed.setThumbnail('https://cdn.discordapp.com/attachments/571908659043631104/740045820430385202/kindpng_4312134.png')
-                            embed.setTimestamp()
-                            embed.setFooter('RBXShop Sales');
-                            message.channel.send(embed);
-                            message.delete({timeout: 1000})
+                        noblox.groupPayout({ group: 7082916, member: [id], amount: [input_val], recurring: false , usePercentage: false}) 
+                        embed.setColor('#00ff1a')
+                        embed.setTitle("Purchase complete, your funds have been sent!")
+                        embed.setAuthor('RBXShop Sales', 'https://cdn.discordapp.com/attachments/571908659043631104/732149000412594237/instock.png')
+                        embed.setDescription(`**${input_val} Robux** has been sent to **${input_name}**. Please leave a vouch in <#724694258128257187>!`)
+                        embed.setThumbnail('https://cdn.discordapp.com/attachments/571908659043631104/740045820430385202/kindpng_4312134.png')
+                        embed.setTimestamp()
+                        embed.setFooter('RBXShop Sales');
+                        message.channel.send(embed);
+                        message.delete({timeout: 1000})
                     });
                 });
             }).catch(err => {

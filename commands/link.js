@@ -17,7 +17,11 @@ module.exports = {
             }
             else if (input_linktype === "group3")
             {
-                message.channel.send("https://www.roblox.com/groups/7108857/roblox-fans#!/about")
+                message.channel.send("https://www.roblox.com/groups/7108857/roblox-fans#!/about");
+            }
+            else if (input_linktype === "group4")
+            {
+                message.channel.send("https://www.roblox.com/groups/7082916/SnapeDaGamer#!/about");
             }
             else if (input_linktype === "pp")
             {

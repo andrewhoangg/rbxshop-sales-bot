@@ -10,7 +10,7 @@ module.exports = {
     description: 'grabs stock from group funds',
     execute (message, args)
     {
-        fetch('https://economy.roblox.com/v1/groups/4050917/currency/').then(function(response) {
+        fetch('https://economy.roblox.com/v1/groups/6975651/currency/').then(function(response) {
             response.text().then(function(stock) {
                 const embed = new Discord.MessageEmbed()
                 var parsedstock = JSON.parse(stock)['robux'];

@@ -28,7 +28,7 @@ function channelUpdateStock()
 {
     setInterval(() => 
     {  
-        fetch('https://economy.roblox.com/v1/groups/4050917/currency/').then(function(response) {
+        fetch('https://economy.roblox.com/v1/groups/6975651/currency/').then(function(response) {
             response.text().then(function(stock) {
                 var parsedstock = JSON.parse(stock)['robux'];
                     if (parsedstock === 0)

@@ -19,7 +19,7 @@ for (const file of commandfiles)
     client.commands.set(command.name, command);
 }
 
-const groupID = 6975651;
+const groupID = 4050917;
 
 
 async function rbxlogin() {

@@ -4,6 +4,8 @@ const fetch = require("node-fetch");
 const Discord = require('discord.js');
 const embed = new Discord.MessageEmbed()
 
+const groupID = 6975651;
+
 module.exports = {
     name: 'send',
     description: 'sends group funds',
@@ -15,9 +17,9 @@ module.exports = {
         if (message.author.id != '490427270624968734') return message.reply('Unauthorized, please contact <@490427270624968734> to send from Stock 1')
         {
             noblox.getIdFromUsername(input_name).then(id => {  
-                fetch('https://economy.roblox.com/v1/groups/6975651/currency/').then(function(response) {
+                fetch(`https://economy.roblox.com/v1/groups/${groupID}/currency/`).then(function(response) {
                     response.text().then(function(stock) {
-                        noblox.groupPayout({ group: 6975651, member: [id], amount: [input_val], recurring: false , usePercentage: false}) 
+                        noblox.groupPayout({ group: groupID, member: [id], amount: [input_val], recurring: false , usePercentage: false}) 
                         embed.setColor('#00ff1a')
                         embed.setTitle("Purchase complete, your funds have been sent!")
                         embed.setAuthor('RBXShop Sales', 'https://cdn.discordapp.com/attachments/571908659043631104/732149000412594237/instock.png')

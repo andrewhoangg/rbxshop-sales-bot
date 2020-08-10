@@ -1,16 +1,15 @@
-const noblox = require('noblox.js');
 const fetch = require("node-fetch");
-
 const Discord = require('discord.js');
-const embed = new Discord.MessageEmbed()
 var numeral = require('numeral');
+
+const groupID = 6975651;
 
 module.exports = {
     name: 'stock',
     description: 'grabs stock from group funds',
     execute (message, args)
     {
-        fetch('https://economy.roblox.com/v1/groups/6975651/currency/').then(function(response) {
+        fetch(`https://economy.roblox.com/v1/groups/${groupID}/currency/`).then(function(response) {
             response.text().then(function(stock) {
                 const embed = new Discord.MessageEmbed()
                 var parsedstock = JSON.parse(stock)['robux'];

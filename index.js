@@ -54,7 +54,7 @@ function channelUpdateStock()
                         }
                         else
                         {
-                            client.channels.cache.get("742467460791402586").setName("💰 STOCK: " + numeral(parsedstock).format('0,0') + " 💰");
+                            client.channels.cache.get("742467460791402586").setName("💰 STOCK2: " + numeral(parsedstock).format('0,0') + " 💰");
                         }
                     });
                 });

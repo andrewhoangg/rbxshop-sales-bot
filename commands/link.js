@@ -13,15 +13,11 @@ module.exports = {
             }
             else if (input_linktype === "group2")
             {
-                message.channel.send("https://www.roblox.com/groups/6975651/roblox-fans#!/about");
+                message.channel.send("https://www.roblox.com/groups/7082916/SnapeDaGamer#!/about");
             }
             else if (input_linktype === "group3")
             {
                 message.channel.send("https://www.roblox.com/groups/7108857/roblox-fans#!/about");
-            }
-            else if (input_linktype === "group4")
-            {
-                message.channel.send("https://www.roblox.com/groups/7082916/SnapeDaGamer#!/about");
             }
             else if (input_linktype === "pp")
             {
@@ -37,7 +33,7 @@ module.exports = {
             }
             else
             {
-                message.reply("Invalid argument! Usage: ```!link [group/group2/pp/venmo/cashapp]```")
+                message.reply("Invalid argument! Usage: ```!link [group/group2/group3/pp/venmo/cashapp]```")
             }
             message.delete({timeout: 500})
         }

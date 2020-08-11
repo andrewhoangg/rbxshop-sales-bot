@@ -19,6 +19,10 @@ module.exports = {
             {
                 message.channel.send("https://www.roblox.com/groups/7108857/roblox-fans#!/about");
             }
+            else if (input_linktype === "group4")
+            {
+                message.channel.send("https://www.roblox.com/groups/5442115/Darth-Developments#!/about");
+            }
             else if (input_linktype === "pp")
             {
                 message.channel.send("https://cdn.discordapp.com/attachments/571908659043631104/730532175132491857/image0.png");

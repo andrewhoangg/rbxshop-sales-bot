@@ -2,7 +2,7 @@ const fetch = require("node-fetch");
 const Discord = require('discord.js');
 var numeral = require('numeral');
 
-const groupID = 5442115;
+const groupID = 4050917;
 
 module.exports = {
     name: 'stock',

@@ -44,7 +44,7 @@ function channelUpdateStock()
             });
 
 
-            fetch(`https://economy.roblox.com/v1/groups/7082916/currency/`).then(function(response) {
+            fetch(`https://economy.roblox.com/v1/groups/7345267/currency/`).then(function(response) {
                 response.text().then(function(stock) {
                     var parsedstock = JSON.parse(stock)['robux'];
                         if (parsedstock === 0)
@@ -97,9 +97,6 @@ client.on('message', message => {
 
         case 'stock':
             client.commands.get('stock').execute(message,args);
-        break;
-        case 'notify':
-            client.commands.get('notify').execute(message,args);
         break;
         case 'form':
             client.commands.get('form').execute(message, args);

@@ -21,7 +21,7 @@ module.exports = {
             }
             else if (input_linktype === "group4")
             {
-                message.channel.send("https://www.roblox.com/groups/5442115/Darth-Developments#!/about");
+                message.channel.send("https://www.roblox.com/groups/7345267/unnamed#!/about");
             }
             else if (input_linktype === "pp")
             {

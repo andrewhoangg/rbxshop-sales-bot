@@ -70,16 +70,6 @@ module.exports = {
         message.channel.send(embed)
         .then(msg => {
             msg.delete({ timeout: 10000 })
-        }).catch(err => {
-            embed.setColor('#f54242')
-            embed.setTitle("Error Caught")
-            embed.setAuthor('RBXShop Sales', 'https://cdn.discordapp.com/attachments/571908659043631104/732149000412594237/instock.png')
-            embed.setDescription('Incorrect command arguments, please refer to <#727795432629207062>')
-            embed.setThumbnail('https://cdn.discordapp.com/attachments/571908659043631104/740041143143628850/error-48242.png')
-            embed.setTimestamp()
-            embed.setFooter('RBXShop Sales');
-            message.channel.send(embed);
-        });
+          })
     }
-    
 }

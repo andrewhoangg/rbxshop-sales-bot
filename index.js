@@ -32,7 +32,7 @@ function channelUpdateStock()
         fetch(`https://economy.roblox.com/v1/groups/${groupID}/currency/`).then(function(response) {
             response.text().then(function(stock) {
                 var parsedstock = JSON.parse(stock)['robux'];
-                    if (parsedstock === 0)
+                    if (parsedstock < 500)
                     {
                         client.channels.cache.get("728507809963966465").setName("❗ RESTOCKING! ❗");
                     }
@@ -47,7 +47,7 @@ function channelUpdateStock()
             fetch(`https://economy.roblox.com/v1/groups/7345267/currency/`).then(function(response) {
                 response.text().then(function(stock) {
                     var parsedstock = JSON.parse(stock)['robux'];
-                        if (parsedstock === 0)
+                        if (parsedstock < 500)
                         {
                             client.channels.cache.get("742467460791402586").setName("❗ RESTOCKING! ❗");
                         }

@@ -38,7 +38,7 @@ module.exports = {
                 embed.setColor('#00ff1a')
                 embed.setTitle(input_val + " Robux at a rate of 0.0055/1 is " + numeral(input_val * rate).format('$0,0.00') + " USD!")
                 embed.setAuthor('RBXShop Sales', 'https://cdn.discordapp.com/attachments/571908659043631104/732149000412594237/instock.png')
-                embed.setDescription('#purchase-robux | Accepted Payment Methods: PayPal, Zelle, CashApp, Venmo, e-Transfer, Amazon')
+                embed.setDescription('<#727795432629207062> | Accepted Payment Methods: PayPal, Zelle, CashApp, Venmo, e-Transfer, Amazon')
                 embed.setThumbnail('https://i.pinimg.com/originals/4d/06/56/4d0656e77aecce07e126af81be09dd39.png')
                 embed.setTimestamp()
                 embed.setFooter('RBXShop Sales'); 
@@ -60,7 +60,7 @@ module.exports = {
                 embed.setColor('#00ff1a')
                 embed.setTitle("$" + input_val + " USD can get you " + numeral(Math.round(input_val * rate2)).format('0,0') + " Robux!")
                 embed.setAuthor('RBXShop Sales', 'https://cdn.discordapp.com/attachments/571908659043631104/732149000412594237/instock.png')
-                embed.setDescription('#purchase-robux | Accepted Payment Methods: PayPal, Zelle, CashApp, Venmo, e-Transfer, Amazon')
+                embed.setDescription('<#727795432629207062> | Accepted Payment Methods: PayPal, Zelle, CashApp, Venmo, e-Transfer, Amazon')
                 embed.setThumbnail('https://i.pinimg.com/originals/4d/06/56/4d0656e77aecce07e126af81be09dd39.png')
                 embed.setTimestamp()
                 embed.setFooter('RBXShop Sales');
@@ -70,6 +70,16 @@ module.exports = {
         message.channel.send(embed)
         .then(msg => {
             msg.delete({ timeout: 10000 })
-          })
+        }).catch(err => {
+            embed.setColor('#f54242')
+            embed.setTitle("Error Caught")
+            embed.setAuthor('RBXShop Sales', 'https://cdn.discordapp.com/attachments/571908659043631104/732149000412594237/instock.png')
+            embed.setDescription('Incorrect command arguments, please refer to <#727795432629207062>')
+            embed.setThumbnail('https://cdn.discordapp.com/attachments/571908659043631104/740041143143628850/error-48242.png')
+            embed.setTimestamp()
+            embed.setFooter('RBXShop Sales');
+            message.channel.send(embed);
+        });
     }
+    
 }

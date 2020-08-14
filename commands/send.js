@@ -4,7 +4,7 @@ const fetch = require("node-fetch");
 const Discord = require('discord.js');
 const embed = new Discord.MessageEmbed()
 
-const groupID = 4050917;
+const groupID = 7345267;
 
 module.exports = {
     name: 'send',

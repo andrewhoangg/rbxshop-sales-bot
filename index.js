@@ -42,21 +42,6 @@ function channelUpdateStock()
                     }
                 });
             });
-
-
-            fetch(`https://economy.roblox.com/v1/groups/7345267/currency/`).then(function(response) {
-                response.text().then(function(stock) {
-                    var parsedstock = JSON.parse(stock)['robux'];
-                        if (parsedstock === 0)
-                        {
-                            client.channels.cache.get("742467460791402586").setName("❗ RESTOCKING! ❗");
-                        }
-                        else
-                        {
-                            client.channels.cache.get("742467460791402586").setName("💰 STOCK2: " + numeral(parsedstock).format('0,0') + " 💰");
-                        }
-                    });
-                });
          }, 12000); // updates every 2 minutes
     }
 

@@ -23,9 +23,13 @@ module.exports = {
             {
                 message.channel.send("https://www.roblox.com/groups/7345267/unnamed#!/about");
             }
-            else if (input_linktype === "pp")
+            else if (input_linktype === "ppqr")
             {
                 message.channel.send("https://cdn.discordapp.com/attachments/571908659043631104/730532175132491857/image0.png");
+            }
+            else if (input_linktype === "pp")
+            {
+                message.channel.send(`Please send $${args[1]} to **rbxshopbusiness@gmail.com** as friends **NOT GOODS/SERVICE!** Once done, please @ andrew. If you'd like to use a different currency other than USD, let us know!`);
             }
             else if (input_linktype === "cashapp")
             {

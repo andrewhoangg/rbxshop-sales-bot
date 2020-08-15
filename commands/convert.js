@@ -66,10 +66,5 @@ module.exports = {
                 embed.setFooter('RBXShop Sales');
             }
         }
-        message.delete({timeout: 1000})
-        message.channel.send(embed)
-        .then(msg => {
-            msg.delete({ timeout: 10000 })
-          })
     }
 }

@@ -66,5 +66,6 @@ module.exports = {
                 embed.setFooter('RBXShop Sales');
             }
         }
+        message.channel.send(embed);
     }
 }

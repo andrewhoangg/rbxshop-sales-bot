@@ -48,7 +48,7 @@ function channelUpdateStock()
 client.on('ready', async message => {
     console.log(`Logged in as ${client.user.tag}!`);
     rbxlogin();
-    client.user.setActivity('!stock for stock info');
+    client.user.setActivity('handling robux sales');
     channelUpdateStock();
 })
 

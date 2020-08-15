@@ -42,7 +42,7 @@ function channelUpdateStock()
                     }
                 });
             });
-         }, 120000); // updates every 1 minute
+         }, 60000); // updates every 1 minute
     }
 
 client.on('ready', async message => {

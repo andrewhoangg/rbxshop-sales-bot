@@ -33,7 +33,7 @@ async function channelUpdateStock()
 {
     for(;;)
     {
-        await sleep(30000);
+        await sleep(60000);
         fetch(`https://economy.roblox.com/v1/groups/${groupID}/currency/`).then(function(response) {
             response.text().then(function(stock) {
                 var parsedstock = JSON.parse(stock)['robux'];

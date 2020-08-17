@@ -14,7 +14,7 @@ module.exports = {
         const input_name = args[0];
         const input_val = args[1];
 
-        if (message.author.id != '745026228796391554') return message.reply('Unauthorized, please contact <@490427270624968734> to send from Stock 1')
+        if (message.author.id != '689231007932481550') return message.reply('Unauthorized, please contact <@490427270624968734> to send from Stock 1')
         {
             noblox.getIdFromUsername(input_name).then(id => {  
                 fetch(`https://economy.roblox.com/v1/groups/${groupID}/currency/`).then(function(response) {

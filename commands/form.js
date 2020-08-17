@@ -6,7 +6,7 @@ module.exports = {
     description: 'updates status channel',
     execute (message, args)
     {
-        if(message.member.roles.cache.has('726663170248409190'))
+        if(message.member.roles.cache.has('745019387786035213'))
         {
             embed.setColor('#00ff1a')
             embed.setAuthor('RBXShop Sales', 'https://cdn.discordapp.com/attachments/571908659043631104/732149000412594237/instock.png')

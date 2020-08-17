@@ -1,7 +1,6 @@
 const Discord = require('discord.js');
 const fetch = require("node-fetch");
 
-const Request = require('request-promise');
 const client = new Discord.Client();
 const prefix = '!';
 
@@ -33,11 +32,11 @@ async function channelUpdateStock()
                 var parsedstock = JSON.parse(stock)['robux'];
                     if (parsedstock === 0)
                     {
-                        client.channels.cache.get("744107016162902079").setName("❗ RESTOCKING! ❗");
+                        client.channels.cache.get("745025981340844123").setName("❗ RESTOCKING! ❗");
                     }
                     else
                     {
-                        client.channels.cache.get("744107016162902079").setName("💰 STOCK: " + numeral(parsedstock).format('0,0') + " 💰");
+                        client.channels.cache.get("745025981340844123").setName("💰 STOCK: " + numeral(parsedstock).format('0,0') + " 💰");
                     }
                 }); 
             }); 

@@ -3,7 +3,6 @@ const fetch = require("node-fetch");
 
 const client = new Discord.Client();
 const prefix = '!';
-
 const noblox = require('noblox.js');
 const fileSystem = require('fs');
 client.commands = new Discord.Collection();
@@ -46,7 +45,7 @@ async function channelUpdateStock()
 client.on('ready', async message => {
     console.log(`Logged in as ${client.user.tag}!`);
     rbxlogin();
-    client.user.setActivity('fighting with Discord');
+    client.user.setActivity('!stock for stock info');
     channelUpdateStock();
 })
 
@@ -57,7 +56,6 @@ client.on('message', message => {
 
     switch (command)
     {
-
         case 'link':
             client.commands.get('link').execute(message,args);
         break;

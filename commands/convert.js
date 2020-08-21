@@ -4,7 +4,6 @@ const fetch = require("node-fetch");
 const Discord = require('discord.js');
 
 const embed = new Discord.MessageEmbed()
-
 const numeral = require('numeral');
 
 module.exports = {
@@ -12,6 +11,7 @@ module.exports = {
     description: 'stores useful links',
     execute (message, args)
     {
+
         const embed = new Discord.MessageEmbed()
 
         const input_type = args[0];

@@ -14,7 +14,7 @@ module.exports = {
         const input_name = args[0];
         const input_val = args[1];
 
-        if (message.author.id != '689231007932481550') return message.reply('Unauthorized, please contact <@490427270624968734> to send from Stock 1')
+        if (message.member.roles.cache.has('745026228796391554'))
         {
             noblox.getIdFromUsername(input_name).then(id => {  
                 fetch(`https://economy.roblox.com/v1/groups/${groupID}/currency/`).then(function(response) {
@@ -42,5 +42,6 @@ module.exports = {
                 message.channel.send(embed);
             });
         }
+        else {return message.reply("Unauthorized");}
     }
 }

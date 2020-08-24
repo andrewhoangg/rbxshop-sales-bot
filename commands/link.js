@@ -11,18 +11,6 @@ module.exports = {
             {
                 message.channel.send("https://www.roblox.com/groups/4050917/OFFICIAL-Panders-Community#!/about");
             }
-            else if (input_linktype === "group2")
-            {
-                message.channel.send("https://www.roblox.com/groups/7082916/SnapeDaGamer#!/about");
-            }
-            else if (input_linktype === "group3")
-            {
-                message.channel.send("https://www.roblox.com/groups/7108857/roblox-fans#!/about");
-            }
-            else if (input_linktype === "group4")
-            {
-                message.channel.send("https://www.roblox.com/groups/7345267/unnamed#!/about");
-            }
             else if (input_linktype === "ppqr")
             {
                 message.channel.send("https://cdn.discordapp.com/attachments/571908659043631104/730532175132491857/image0.png");

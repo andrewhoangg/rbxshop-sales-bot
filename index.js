@@ -61,6 +61,7 @@ client.on('message', message => {
         break;
 
         case 'send':
+            const embed = new Discord.MessageEmbed();
             const input_name = args[0];
             const input_val = args[1];
     

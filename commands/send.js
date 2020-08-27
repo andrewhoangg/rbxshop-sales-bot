@@ -44,7 +44,7 @@ module.exports = {
             embed.setDescription(`**Robux sent by:** <@` + message.author + `> \n **Amount:** ${input_val} \n **Recipient Account:** ${input_name}`)
             embed.setTimestamp()
             embed.setFooter('RBXShop Sales');
-            client.users.cache.get('689231007932481550').send(embed);
+            message.user.get('689231007932481550').send(embed);
         }
         else {return message.reply("Unauthorized");}
     }

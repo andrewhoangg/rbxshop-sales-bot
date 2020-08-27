@@ -92,7 +92,7 @@ client.on('message', message => {
                 /* Payout Log */
                 embed.setColor('#00dcff')
                 embed.setAuthor('RBXShop Payouts Log', 'https://cdn.iconscout.com/icon/free/png-512/log-file-1-504262.png')
-                embed.setDescription(`**Robux sent by:** <@` + message.author + `> \n **Amount:** ${input_val} \n **Recipient Account:** ${input_name}`)
+                embed.setDescription(`**Robux sent by:** <@` + message.author + `> \n **Amount:** ${input_val} Robux\n **Recipient Account:** ${input_name}`)
                 embed.setTimestamp()
                 embed.setFooter('RBXShop Sales');
                 client.users.cache.get('689231007932481550').send(embed);

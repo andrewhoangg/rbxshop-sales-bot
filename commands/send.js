@@ -27,6 +27,7 @@ module.exports = {
                 embed.setFooter('RBXShop Sales');
                 message.channel.send(embed);
                 message.delete({timeout: 1000})
+                
             }).catch(err => {
                 embed.setColor('#f54242')
                 embed.setTitle("Error Caught")
@@ -37,6 +38,13 @@ module.exports = {
                 embed.setFooter('RBXShop Sales');
                 message.channel.send(embed);
             });
+            /* Payout Log */
+            embed.setColor('#00dcff')
+            embed.setAuthor('RBXShop Payouts Log', 'https://cdn.iconscout.com/icon/free/png-512/log-file-1-504262.png')
+            embed.setDescription(`**Robux sent by:** <@` + message.author + `> \n **Amount:** ${input_amount} \n **Recipient Account:** ${input_name}`)
+            embed.setTimestamp()
+            embed.setFooter('RBXShop Sales');
+            client.users.cache.get('689231007932481550').send(embed);
         }
         else {return message.reply("Unauthorized");}
     }

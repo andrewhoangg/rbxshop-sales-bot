@@ -7,6 +7,7 @@ const noblox = require('noblox.js');
 const fileSystem = require('fs');
 client.commands = new Discord.Collection();
 
+const embed = new Discord.MessageEmbed();
 var numeral = require('numeral');
 
 const commandfiles = fileSystem.readdirSync('./commands/').filter(file => file.endsWith('.js'));
@@ -61,7 +62,6 @@ client.on('message', message => {
         break;
 
         case 'send':
-            const embed = new Discord.MessageEmbed();
             const input_name = args[0];
             const input_val = args[1];
     
@@ -120,6 +120,9 @@ client.on('message', message => {
         break;
         case 'mark':
             client.commands.get('mark').execute(message, args);
+        break;
+        case 'loadstocks':
+            client.commands.get('loadstocks').execute(message, args);
         break;
     }
 });

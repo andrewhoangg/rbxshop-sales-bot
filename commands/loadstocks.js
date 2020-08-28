@@ -14,11 +14,7 @@ module.exports = {
             fetch(`https://economy.roblox.com/v1/groups/${groupID}/currency/`).then(function(response) {
             response.text().then( async function(stock) {
                 var parsedstock = JSON.parse(stock)['robux'];
-                const Loading = new Discord.MessageEmbed()
-                .setDescription("Loading...")
-                .setColor("#ffbd54");
 
-                const msg = await message.channel.send(Loading);
                         const embed = new Discord.MessageEmbed();
                         embed.setColor('#ff5a54')
                         embed.setAuthor('RBXShop™️ | Live Stocks', 'https://cdn.discordapp.com/attachments/745010239681724541/745012270702264441/image0_1.png')
@@ -30,9 +26,12 @@ module.exports = {
                         )
                         embed.setTimestamp()
                         embed.setFooter('RBXShop Sales');
+
                         
-                        setInterval(() => {
-                            msg.edit(embed);
+                            
+                        setInterval(async function() {
+                            const msg = await message.channel.send(embed);
+                            msg.delete(embed);
                         }, 5000);
                 })
             });

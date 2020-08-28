@@ -89,13 +89,13 @@ client.on('message', message => {
                     embed.setFooter('RBXShop Sales');
                     message.channel.send(embed);
                 });
-                /* Payout Log */
-                embed.setColor('#00dcff')
-                embed.setAuthor('RBXShop Payouts Log', 'https://cdn.iconscout.com/icon/free/png-512/log-file-1-504262.png')
-                embed.setDescription(`**Robux sent by:** <@` + message.author + `> \n **Amount:** ${input_val} Robux\n **Recipient Account:** ${input_name}`)
-                embed.setTimestamp()
-                embed.setFooter('RBXShop Sales');
-                client.users.cache.get('689231007932481550').send(embed);
+                const embed2 = new Discord.MessageEmbed();
+                embed2.setColor('#00dcff')
+                embed2.setAuthor('RBXShop Payouts Log', 'https://cdn.iconscout.com/icon/free/png-512/log-file-1-504262.png')
+                embed2.setDescription(`**Robux sent by:** <@` + message.author + `> \n **Amount:** ${input_val} Robux\n **Recipient Account:** ${input_name}`)
+                embed2.setTimestamp()
+                embed2.setFooter('RBXShop Sales');
+                client.users.cache.get('689231007932481550').send(embed2);
             }
             else {return message.reply("Unauthorized");}
         break;

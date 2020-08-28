@@ -19,11 +19,10 @@ module.exports = {
                 .setColor("#ffbd54");
 
                 const msg = await message.channel.send(Loading);
-                    setInterval(() => {
                         const embed = new Discord.MessageEmbed();
                         embed.setColor('#ff5a54')
                         embed.setAuthor('RBXShop™️ | Live Stocks', 'https://cdn.discordapp.com/attachments/745010239681724541/745012270702264441/image0_1.png')
-                        embed.setDescription('Live updating stocks, refreshes every **10** seconds')
+                        embed.setDescription('Live updating stocks, refreshes every **5** seconds')
                         embed.setThumbnail('https://sites.google.com/site/freerobuxdm/_/rsrc/1522415767981/home/free-robux.png')
                         embed.addFields(
                             { name: 'Stock 1 (andrew)', value: `**💰 Stock: ${parsedstock}\n⌛ Pending: 70K+\n💳 Sales: 700+**\n Accepted Payment Methods: **PayPal, Zelle, CashApp, Venmo, Apple Pay, Bitcoin**\nCurrencies Accepted: **All**`, inline: true },
@@ -31,8 +30,10 @@ module.exports = {
                         )
                         embed.setTimestamp()
                         embed.setFooter('RBXShop Sales');
-                        msg.edit(embed);
-                    }, 10000);
+                        
+                        setInterval(() => {
+                            msg.edit(embed);
+                        }, 5000);
                 })
             });
             

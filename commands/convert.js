@@ -19,8 +19,6 @@ module.exports = {
         
         let rate = 0.0055; /*0.0055 per 1 R$*/
         let rate2 = 181.8181818181818; /* <-- per $1 */
-
-        numeral.defaultFormat('$0,0.00');
         
         if (input_type === "robux") // R$ -> USD
         {

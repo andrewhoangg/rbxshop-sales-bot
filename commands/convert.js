@@ -2,20 +2,21 @@
 
 const Discord = require('discord.js');
 const numeral = require('numeral');
-const embed = new Discord.MessageEmbed();
 
-/* Defining Input Arguments */
-const input_type = args[0];
-const input_val = args[1];
-
-let rate = 0.0055; /*0.0055 per 1 R$*/
-let rate2 = 181.8181818181818; /* <-- per $1 */
 
 module.exports = {
     name: 'convert',
     description: 'stores useful links',
     execute (message, args)
-    {    
+    {    const embed = new Discord.MessageEmbed();
+
+        /* Defining Input Arguments */
+        const input_type = args[0];
+        const input_val = args[1];
+        
+        let rate = 0.0055; /*0.0055 per 1 R$*/
+        let rate2 = 181.8181818181818; /* <-- per $1 */
+        
         switch (input_type)
         {
             case 'robux': /* Converts Robux to USD @ rate of 5.50/1K */

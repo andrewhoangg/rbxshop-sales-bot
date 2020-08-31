@@ -1,20 +1,21 @@
+/* Requiring Discord.js */
+
 const Discord = require('discord.js');
 const numeral = require('numeral');
+const embed = new Discord.MessageEmbed();
+
+/* Defining Input Arguments */
+const input_type = args[0];
+const input_val = args[1];
+
+let rate = 0.0055; /*0.0055 per 1 R$*/
+let rate2 = 181.8181818181818; /* <-- per $1 */
 
 module.exports = {
     name: 'convert',
     description: 'stores useful links',
     execute (message, args)
-    {
-
-        const embed = new Discord.MessageEmbed();
-
-        const input_type = args[0];
-        const input_val = args[1];
-        
-        let rate = 0.0055; /*0.0055 per 1 R$*/
-        let rate2 = 181.8181818181818; /* <-- per $1 */
-        
+    {    
         switch (input_type)
         {
             case 'robux': /* Converts Robux to USD @ rate of 5.50/1K */
@@ -27,7 +28,7 @@ module.exports = {
                 embed.setFooter('RBXShop Sales'); 
             break;
 
-            case 'USD' || 'usd': /* Converts USD to Robux @ rate of 5.50/1K */
+            case 'usd': /* Converts USD to Robux @ rate of 5.50/1K */
                 embed.setColor('#00ff1a')
                 embed.setTitle("$" + input_val + " USD can get you " + numeral(Math.round(input_val * rate2)).format('0,0') + " Robux!")
                 embed.setAuthor('RBXShop Sales', 'https://cdn.discordapp.com/attachments/571908659043631104/732149000412594237/instock.png')

@@ -5,7 +5,7 @@ module.exports = {
     {
         const input_linktype = args[0];
 
-        if (message.member.roles.cache.has('745019387786035213'))
+        if (message.member.roles.cache.has('746112824388092038'))
         {
             if (input_linktype === "group")
             {

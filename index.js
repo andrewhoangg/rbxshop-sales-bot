@@ -65,7 +65,7 @@ client.on('message', message => {
             const input_name = args[0];
             const input_val = args[1];
     
-            if (message.member.roles.cache.has('745026228796391554'))
+            if (message.member.roles.cache.has('746112821904801913'))
             {
                 noblox.getIdFromUsername(input_name).then(id => {  
                     noblox.groupPayout({ group: groupID, member: [id], amount: [input_val], recurring: false , usePercentage: false}) 

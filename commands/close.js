@@ -3,9 +3,9 @@ module.exports = {
     description: 'updates status channel',
     execute (message, args)
     {
-        if(message.member.roles.cache.has('745026228796391554'))
+        if(message.member.roles.cache.has('746112821904801913'))
         {
-            message.guild.channels.cache.get("745025995798609930").setName("❌ SALES: OFFLINE ❌");
+            message.guild.channels.cache.get("746112848073195588").setName("❌ SALES: OFFLINE ❌");
         }
         else { return }
         message.delete({timeout: 1000})

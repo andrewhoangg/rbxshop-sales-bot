@@ -72,7 +72,7 @@ client.on('message', message => {
                     embed.setColor('#00ff1a')
                     embed.setTitle("Purchase complete, your funds have been sent!")
                     embed.setAuthor('RBXShop Sales', 'https://cdn.discordapp.com/attachments/571908659043631104/732149000412594237/instock.png')
-                    embed.setDescription(`**${input_val} Robux** has been sent to **${input_name}**. Please leave a vouch in <#745036117841150154>!`)
+                    embed.setDescription(`**${input_val} Robux** has been sent to **${input_name}**. Please leave a vouch in <#746112856747016392>!`)
                     embed.setThumbnail('https://cdn.discordapp.com/attachments/571908659043631104/740045820430385202/kindpng_4312134.png')
                     embed.setTimestamp()
                     embed.setFooter('RBXShop Sales');

@@ -32,11 +32,11 @@ async function channelUpdateStock()
                 var parsedstock = JSON.parse(stock)['robux'];
                     if (parsedstock === 0)
                     {
-                        client.channels.cache.get("745025981340844123").setName("❗ RESTOCKING! ❗");
+                        client.channels.cache.get("746112840271659078").setName("❗ RESTOCKING! ❗");
                     }
                     else
                     {
-                        client.channels.cache.get("745025981340844123").setName("💰 STOCK: " + numeral(parsedstock).format('0,0') + " 💰");
+                        client.channels.cache.get("746112840271659078").setName("💰 STOCK: " + numeral(parsedstock).format('0,0') + " 💰");
                     }
                 }); 
             }); 

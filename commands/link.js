@@ -14,7 +14,7 @@ module.exports = {
             else if (input_linktype === "pp")
             {
                 if (isNaN(args[1])){} else {
-                    message.channel.send(`Please send $${args[1]} to **rbxshop@protonmail.com** Once done, please @ andrew. If you'd like to use a different currency other than USD, let us know!`);
+                    message.channel.send(`Please send $${args[1]} to **rbxshop@protonmail.com** **__AS FRIENDS NOT GOODS__** Once done, please @ andrew. If you'd like to use a different currency other than USD, let us know!`);
                 }     
             }
             else if (input_linktype === "cashapp")

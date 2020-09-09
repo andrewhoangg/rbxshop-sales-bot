@@ -14,8 +14,8 @@ module.exports = {
         const input_type = args[0];
         const input_val = args[1];
         
-        let rate = 0.06; /*0.06 per 1 R$*/
-        let rate2 = 0.1666666666666667; /* <-- per $1 */
+        let rate = 0.006; /*0.06 per 1 R$*/
+        let rate2 = 166.6666666666667; /* <-- per $1 */
         
         switch (input_type)
         {

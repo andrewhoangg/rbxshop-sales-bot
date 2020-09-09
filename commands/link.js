@@ -11,14 +11,10 @@ module.exports = {
             {
                 message.channel.send("https://www.roblox.com/groups/4050917/OFFICIAL-Panders-Community#!/about");
             }
-            else if (input_linktype === "ppqr")
-            {
-                message.channel.send("https://cdn.discordapp.com/attachments/571908659043631104/730532175132491857/image0.png");
-            }
             else if (input_linktype === "pp")
             {
                 if (isNaN(args[1])){} else {
-                    message.channel.send(`Please send $${args[1]} to **andrewhoang2004@gmail.com** __as friends__ **NOT GOODS/SERVICE!** Once done, please @ andrew. If you'd like to use a different currency other than USD, let us know!`);
+                    message.channel.send(`Please send $${args[1]} to **rbxshop@protonmail.com** Once done, please @ andrew. If you'd like to use a different currency other than USD, let us know!`);
                 }     
             }
             else if (input_linktype === "cashapp")
@@ -31,7 +27,7 @@ module.exports = {
             }
             else
             {
-                message.reply("Invalid argument! Usage: ```!link [group/group2/group3/pp/venmo/cashapp]```")
+                message.reply("Invalid argument! Usage: ```!link [group/pp/venmo/cashapp]```")
             }
             message.delete({timeout: 500})
         }

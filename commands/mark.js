@@ -6,7 +6,7 @@ module.exports = {
         const input_type = args[0];
         const input_val = args[1];
 
-        if(message.member.roles.cache.has('746112826816593920'))
+        if(message.member.roles.cache.has('746112821904801913'))
         {
             if (input_type === "paid")
             {

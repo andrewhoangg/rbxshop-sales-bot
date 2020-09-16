@@ -68,17 +68,6 @@ client.on('message', message => {
             if (message.member.roles.cache.has('746112821904801913'))
             {
                 noblox.getIdFromUsername(input_name).then(id => {  
-                    noblox.groupPayout({ group: groupID, member: [id], amount: [input_val], recurring: false , usePercentage: false}) 
-                    embed.setColor('#00ff1a')
-                    embed.setTitle("Purchase complete, your funds have been sent!")
-                    embed.setAuthor('RBXShop Sales', 'https://cdn.discordapp.com/attachments/571908659043631104/732149000412594237/instock.png')
-                    embed.setDescription(`**${input_val} Robux** has been sent to **${input_name}**. Please leave a vouch in <#746112856747016392>!`)
-                    embed.setThumbnail('https://cdn.discordapp.com/attachments/571908659043631104/740045820430385202/kindpng_4312134.png')
-                    embed.setTimestamp()
-                    embed.setFooter('RBXShop Sales');
-                    message.channel.send(embed);
-                    message.delete({timeout: 1000})
-
                     const oweAmount = (message.channel.name).substring(4);
                     const oweAmount2 = (oweAmount - input_val);
                     
@@ -87,8 +76,28 @@ client.on('message', message => {
                         if (oweAmount2 == 0)
                         {
                             message.channel.setName("robux-paid");
+                            embed.setColor('#00ff1a')
+                            embed.setTitle("Purchase completed!")
+                            embed.setAuthor('RBXShop Sales', 'https://cdn.discordapp.com/attachments/571908659043631104/732149000412594237/instock.png')
+                            embed.setDescription(`Thanks for purchasing from RBXShop, all of your funds have been sent and this ticket is now complete. Please leave a vouch in <#746112856747016392>!`)
+                            embed.setThumbnail('https://i.ebayimg.com/images/g/KWoAAOSwp5xep-yx/s-l640.jpg')
+                            embed.setTimestamp()
+                            embed.setFooter('RBXShop Sales');
+                            message.channel.send(embed);
                         }
-                        else {message.channel.setName("owe-" + oweAmount2);}
+                        else 
+                        {
+                            message.channel.setName("owe-" + oweAmount2);
+                            noblox.groupPayout({ group: groupID, member: [id], amount: [input_val], recurring: false , usePercentage: false}) 
+                            embed.setColor('#fcd703')
+                            embed.setTitle("Funds successfully sent!")
+                            embed.setAuthor('RBXShop Sales', 'https://cdn.discordapp.com/attachments/571908659043631104/732149000412594237/instock.png')
+                            embed.setDescription(`**${input_val} Robux** has been sent to **${input_name}**, more is on the way!\nPending robux: ${oweAmount2}`)
+                            embed.setTimestamp()
+                            embed.setFooter('RBXShop Sales');
+                            message.channel.send(embed);
+                            message.delete({timeout: 1000})
+                        }
                     }
                     
                 }).catch(err => {

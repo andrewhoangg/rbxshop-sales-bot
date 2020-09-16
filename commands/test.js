@@ -6,8 +6,6 @@ module.exports = {
     description: 'updates ticket status',
     execute (message, args)
     {
-        const input_name = args[0];
-        const input_val = args[1];
 
         const oweAmount = (message.channel.name).substring(4);
         const oweAmount2 = (oweAmount - input_val);

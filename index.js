@@ -134,7 +134,7 @@ client.on('message', message => {
             client.commands.get('mark').execute(message, args);
         break;
         case 'test':
-            client.commands.get('test').execute(message, args);
+            //client.commands.get('test').execute(message, args);
         break;
     }
 });

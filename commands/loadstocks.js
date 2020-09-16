@@ -21,7 +21,7 @@ module.exports = {
                         embed.setDescription('Live updating stocks, refreshes every **5** seconds')
                         embed.setThumbnail('https://sites.google.com/site/freerobuxdm/_/rsrc/1522415767981/home/free-robux.png')
                         embed.addFields(
-                            { name: 'Stock 1 (andrew)', value: `**💰 Stock: ${parsedstock}\n⌛ Pending: 70K+\n💳 Sales: 700+**\n Accepted Payment Methods: **PayPal, Zelle, CashApp, Venmo, Apple Pay, Google Pay, Bitcoin, Amazon (CAD)**\nCurrencies Accepted: **All**`, inline: true },
+                            { name: 'Stock 1 (andrew)', value: `**💰 Stock: ${parsedstock}\n⌛ Pending: 70K+\n💳 Sales: 700+**\n Accepted Payment Methods: ~~PayPal~~, Zelle, CashApp, Venmo, Apple Pay, Google Pay, Zelle, CashApp, Venmo, Apple Pay, Google Pay, Bitcoin, Amazon (CAD)**\nCurrencies Accepted: **All**`, inline: true },
                             { name: 'Stock 2 (Builderman)', value: `**💰 Stock: 210K+\n⌛ Pending: 100K+\n💳 Sales: 200+**\n Accepted Payment Methods: **CashApp (USD), Bitcoin, e-Transfer, Amazon**\nCurrencies Accepted: **CAD**`, inline: true },
                         )
                         embed.setTimestamp()

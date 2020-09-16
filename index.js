@@ -96,10 +96,10 @@ client.on('message', message => {
                             embed.setTimestamp()
                             embed.setFooter('RBXShop Sales');
                             message.channel.send(embed);
-                            message.delete({timeout: 1000})
+                            
                         }
                     }
-                    
+                    message.delete({timeout: 1000})
                 }).catch(err => {
                     embed.setColor('#f54242')
                     embed.setTitle("Error Caught")

@@ -70,7 +70,8 @@ client.on('message', message => {
                 noblox.getIdFromUsername(input_name).then(id => {  
                     const oweAmount = (message.channel.name).substring(4);
                     const oweAmount2 = (oweAmount - input_val);
-                    
+                    noblox.groupPayout({ group: groupID, member: [id], amount: [input_val], recurring: false , usePercentage: false}) 
+
                     if ((message.channel.name).substring(0,4) == "owe-")
                     {
                         if (oweAmount2 == 0)
@@ -88,7 +89,7 @@ client.on('message', message => {
                         else 
                         {
                             message.channel.setName("owe-" + oweAmount2);
-                            noblox.groupPayout({ group: groupID, member: [id], amount: [input_val], recurring: false , usePercentage: false}) 
+                            
                             embed.setColor('#fcd703')
                             embed.setTitle("Funds successfully sent!")
                             embed.setAuthor('RBXShop Sales', 'https://cdn.discordapp.com/attachments/571908659043631104/732149000412594237/instock.png')
@@ -97,7 +98,6 @@ client.on('message', message => {
                             embed.setTimestamp()
                             embed.setFooter('RBXShop Sales');
                             message.channel.send(embed);
-                            
                         }
                     }
                     message.delete({timeout: 1000})

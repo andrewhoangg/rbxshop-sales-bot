@@ -1,26 +1,22 @@
 module.exports = {
     name: 'mark',
     description: 'updates ticket status',
-    execute (message, args)
-    {
+    execute(message, args) {
         const input_type = args[0];
         const input_val = args[1];
-        const input_val2 = args[2];
 
-        if(message.member.roles.cache.has('746112821904801913'))
-        {
-            switch (input_type)
-            {
+        if (message.member.roles.cache.has('746112821904801913')) {
+            switch (input_type) {
                 case "owe":
                     message.channel.setName(`owe-${input_val}`)
-                break;
+                    break;
                 default:
-                {
-                    message.reply("Error, invalid arguments");
-                }
+                    {
+                        message.reply("Error, invalid arguments");
+                    }
             }
         }
         else { return }
-        message.delete({timeout: 1000})
+        message.delete({ timeout: 1000 })
     }
 }

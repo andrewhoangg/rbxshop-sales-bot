@@ -4,10 +4,8 @@ const embed = new Discord.MessageEmbed()
 module.exports = {
     name: 'form',
     description: 'updates status channel',
-    execute (message, args)
-    {
-        if(message.member.roles.cache.has('746112824388092038'))
-        {
+    execute(message) {
+        if (message.member.roles.cache.has('746112824388092038')) {
             embed.setColor('#00ff1a')
             embed.setAuthor('RBXShop Sales', 'https://cdn.discordapp.com/attachments/571908659043631104/732149000412594237/instock.png')
             embed.setDescription("Thank you for being interested in RBXShop, please fill out this form and a seller will be right with you. \n\n Roblox Username: \n Amount: \n Payment Method (~~PayPal~~, Zelle, CashApp, Venmo, Apple Pay, Google Pay):")
@@ -17,6 +15,6 @@ module.exports = {
             message.channel.send(embed);
         }
         else { return }
-        message.delete({timeout: 1000})
+        message.delete({ timeout: 1000 })
     }
 }

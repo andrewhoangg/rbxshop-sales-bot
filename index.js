@@ -93,6 +93,7 @@ client.on('message', message => {
                             embed.setTitle("Funds successfully sent!")
                             embed.setAuthor('RBXShop Sales', 'https://cdn.discordapp.com/attachments/571908659043631104/732149000412594237/instock.png')
                             embed.setDescription(`**${input_val} Robux** has been sent to **${input_name}**, more is on the way!\nPending robux: ${oweAmount2}`)
+                            embed.setThumbnail('https://freeiconshop.com/wp-content/uploads/edd/checkmark-flat.png')
                             embed.setTimestamp()
                             embed.setFooter('RBXShop Sales');
                             message.channel.send(embed);

@@ -11,11 +11,8 @@ module.exports = {
         {
             switch (input_type)
             {
-                case "paid":
+                case "owe":
                     message.channel.setName(`owe-${input_val}`)
-                break;
-                case "complete":
-                    message.channel.setName("robux-paid")
                 break;
                 default:
                 {

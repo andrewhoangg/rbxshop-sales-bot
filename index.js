@@ -78,6 +78,18 @@ client.on('message', message => {
                     embed.setFooter('RBXShop Sales');
                     message.channel.send(embed);
                     message.delete({timeout: 1000})
+
+                    const oweAmount = (message.channel.name).substring(4);
+                    const oweAmount2 = (oweAmount - input_val);
+                    
+                    if ((message.channel.name).substring(0,4) == "owe-")
+                    {
+                        if (oweAmount2 == 0)
+                        {
+                            message.channel.setName("robux-paid");
+                        }
+                        else {message.channel.setName("owe-" + oweAmount2);}
+                    }
                     
                 }).catch(err => {
                     embed.setColor('#f54242')
@@ -121,8 +133,8 @@ client.on('message', message => {
         case 'mark':
             client.commands.get('mark').execute(message, args);
         break;
-        case 'loadstocks':
-            client.commands.get('loadstocks').execute(message, args);
+        case 'test':
+            client.commands.get('test').execute(message, args);
         break;
     }
 });

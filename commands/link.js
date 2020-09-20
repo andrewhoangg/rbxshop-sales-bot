@@ -10,7 +10,7 @@ module.exports = {
             }
             else if (input_linktype === "pp") {
                 if (isNaN(args[1])) { } else {
-                    message.channel.send(`Please send $${args[1]} to **axialpayment@gmail.com** **__AS FRIENDS NOT GOODS__** Once done, please @ andrew. If you'd like to use a different currency other than USD, let us know!`);
+                    message.channel.send(`Please go here: https://www.paypal.com/paypalme/axialsolutions and send: $${args[1]} Once done, please @ andrew. If you'd like to use a different currency other than USD, let us know!`);
                 }
             }
             else if (input_linktype === "cashapp") {

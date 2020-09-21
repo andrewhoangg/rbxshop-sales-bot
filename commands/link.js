@@ -4,7 +4,7 @@ module.exports = {
     execute(message, args) {
         const input_linktype = args[0];
 
-        if (message.member.roles.cache.has('746112824388092038')) {
+        if (message.member.roles.cache.has('746112821904801913')) {
             if (input_linktype === "group") {
                 message.channel.send("https://www.roblox.com/groups/4050917/OFFICIAL-Panders-Community#!/about");
             }

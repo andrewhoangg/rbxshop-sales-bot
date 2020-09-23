@@ -73,7 +73,7 @@ client.on('message', message => {
                             embed.setTitle("Purchase completed!")
                             embed.setAuthor('RBXShop Sales', 'https://cdn.discordapp.com/attachments/571908659043631104/732149000412594237/instock.png')
                             embed.setDescription(`Thanks for purchasing from RBXShop, all of your funds have been sent and this ticket is now complete. Please leave a vouch in <#746112856747016392>!`)
-                            embed.setThumbnail('https://i.ebayimg.com/images/g/KWoAAOSwp5xep-yx/s-l640.jpg')
+                            embed.setThumbnail('https://i.kym-cdn.com/photos/images/original/001/170/001/c44.png')
                             embed.setTimestamp()
                             embed.setFooter('RBXShop Sales');
                             message.channel.send(embed);

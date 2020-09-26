@@ -10,11 +10,11 @@ module.exports = {
     execute(message, args) {
         const embed = new Discord.MessageEmbed();
 
-        /* Defining Input Arguments */
+        /* Defining input arguments */
         const input_type = args[0];
         const input_val = args[1];
 
-        let rate = 0.0055; /*0.06 per 1 R$*/
+        let rate = 0.0055; /*0.0055 per 1 robux (closed currency)*/
         let rate2 = 181.8181818181818; /* <-- per $1 */
 
         if (isNaN(input_val)) {

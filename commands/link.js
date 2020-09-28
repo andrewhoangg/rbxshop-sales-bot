@@ -6,7 +6,7 @@ module.exports = {
 
         if (message.member.roles.cache.has('746112821904801913')) {
             if (input_linktype === "group") {
-                message.channel.send("https://www.roblox.com/groups/4050917/OFFICIAL-Panders-Community#!/about");
+                message.channel.send("gl");
             }
             else if (input_linktype === "pp") {
                 if (isNaN(args[1])) { } else {
@@ -14,10 +14,10 @@ module.exports = {
                 }
             }
             else if (input_linktype === "cashapp") {
-                message.channel.send("https://cdn.discordapp.com/attachments/571908659043631104/728510511708373064/Screenshot_20200703-002028.png");
+                message.channel.send("");
             }
             else if (input_linktype === "venmo") {
-                message.channel.send("https://cdn.discordapp.com/attachments/571908659043631104/728510581862170664/Screenshot_20200703-002051.png");
+                message.channel.send("");
             }
             else {
                 message.reply("Invalid argument! Usage: ```!link [group/pp/venmo/cashapp]```")

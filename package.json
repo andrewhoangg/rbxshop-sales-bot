@@ -12,7 +12,7 @@
     "discord.js": "^12.2.0",
     "money": "^0.2.0",
     "noblox.js": "^4.6.5",
-    "node-fetch": "^2.6.0",
+    "node-fetch": "^3.1.1",
     "node.js": "0.0.1-security",
     "numeral": "^2.0.6",
     "request-promise": "^4.2.6"
